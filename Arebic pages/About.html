@@ -3,78 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>About</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="master.css">
+    <script src="master.js" defer></script>
+    <title>من نحن</title>
 </head>
 <body>
-    <div class="page">
-                <div class="hero-section">
-            <div class="nav-bar">
-                <div class="logo">
-                <img src="../img/Point_of_connection_final2_logo-1-removebg-preview.png" alt="">
-                </div>
-                 <div class="menu-icon" id="menu-icon">&#9776; <span>Menu</span> </div>
-                <nav  id="nav-menu">
-                    <ul class="wdn">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                         <li>
-                            <a class="on-active" href="About.html">About Us</a>
-                        </li>
-                         <li>
-                            <a href="product.html">Products</a>
-                        </li>
-                        <li>
-                            <a href="service.html">Service & Support <span><ion-icon name="caret-down"></ion-icon></a>
-                            <ul class="dropdown">
-                                 <li><a href="service.html ">Importing Services</a></li>
-                                 <li><a href="service.html">Market Research & Product Selection</a></li>
-                                 <li><a href="service.html">Logistics Support</a></li>
-                                 <li><a href="service.html">Distribution Services</a></li>
-                                 <li><a href="service.html">Marketing Services</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="toggles">
-                    <div>
-              <label>
-            <input type="checkbox" class="checkbox" id="darkModeToggle"/>
-            <ion-icon name="sunny" class="sun"></ion-icon>
-            <ion-icon name="moon" class="moon"></ion-icon>
-            <div class="toggle"></div>
-          </label>
+     <header>
+      <nav>
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+ <li><a class="on-active" href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="About.html">من نحن</a></li>
+                    <li><a href="product.html">المنتجات</a></li>
+                    <li class="dropdown">
+                        <a href="service.html">الخدمة والدعم<span><ion-icon name="caret-down"></ion-icon></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="service.html">خدمات الاستيراد</a></li>
+                            <li><a href="service.html">أبحاث السوق واختيار المنتجات</a></li>
+                            <li><a href="service.html">دعم الخدمات اللوجستية</a></li>
+                            <li><a href="service.html">خدمات التوزيع</a></li>
+                            <li><a href="service.html">خدمات التسويق</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html"> اتصل بنا</a></li>
+        </ul>
+        <div class="toggles">
+          <div class="dropdown">
+            <button class="toggl-btn" id="language-toggle">
+              <ion-icon class="langu" name="language-outline"></ion-icon>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="../About.html">EN</a></li>
+              <li><a href="About.html">العربية</a></li>
+            </ul>
           </div>
-         <div class="lang">
-            <li><ion-icon class="langu" name="language-outline"></ion-icon><span>Lang</span>
-                <ul class="dropdown">
-                     <li><a href="../About.html">English</a></li>
-                     <li><a href="About.html">العربية</a></li>
-                </ul>
-            </li>
-         </div>
-       </div>
-            </div>
-          
-            <div class="about-hero-heder">
-                <div class="hero-main">
-            <h1>معلومات عنا</h1>
-            </div>
-          </div>
+          <button class="toggl-btn" id="mode-toggle">☼</button>
+          <button id="menu-toggle" class="menu-icon">☰</button>
         </div>
-    
+      </nav>
+    </header>
+    <section class="hero">     
+                <H2>مرحبًا بكم في نقطة الاتصال</H2>
+                <h1>معلومات عنا</h1>
+    </section>
         <div class="about-body">
         <div class="first-grid">
             <div class="about blur">
@@ -133,13 +118,16 @@
                     <div class="profile">
                         <img src="../../img/network-user-icon.png" alt="">
                         <span>
-                            <p class="name">manager name</p>
-                            <p class="roll">manager</p>
+                            <p class="name">اسم المدير</p>
+                            <p class="roll">المدير</p>
                         </span>
                     </div>
                     <div class="line"></div>
                     <p class="pharagraph">
-                        تعزيز صورة العلامة التجارية للشركة من خلال تقديم خدمات توزيع ممتازة وتعزيز العلاقات مع العملاء والموردين وأصحاب المصلحة الآخرين
+                      ،‫اﻟﺠﺪ‬ ‫ﻣﺤﻤﻞ‬ ‫ﻋﻠﻰ‬ ‫اﻟﻤﺤﻠﻲ‬ ‫اﻻﻗﺘﺼﺎد‬ ‫ﻓﻲ‬ ‫دورﻧﺎ‬ ‫وﻧﺄﺧﺬ‬ ‫اﻫﺪاﻓﻨﺎ‬ ‫ﻟﺘﺤﻘﻴﻖ‬ ‫ﺟﺎﻫﺪﻳﻦ‬ ‫ﻧﺴﻌﻰ‬ ‫وﺻﺎل‬ ‫ﻧﻘﻄﺔ‬ ‫ﻓﻲ‬
+                      ‫اﻟﻤﻌﻨﻴﺔ‬ ‫اﻷﻃﺮاف‬ ‫ﻟﺠﻤﻴﻊ‬ ‫وﻣﻔﻴﺪة‬ ‫وﻣﺤﺘﺮﻣﺔ‬ ‫ﻋﺎدﻟﺔ‬ ‫ﺑﻄﺮﻳﻘﺔ‬ ‫اﻟﺘﺠﺎرﻳﺔ‬ ‫اﻷﻋﻤﺎل‬ ‫ﺑﻤﻤﺎرﺳﺔ‬ ‫ﻣﻠﺘﺰﻣﻮن‬ ‫ﻧﺤﻦ‬
+                      ‫اﻗﺘﺼﺎدﻳﺔ‬ ‫ﻓﺮص‬ ‫ﻟﺨﻠﻖ‬ ‫ﻧﺴﻌﻰ‬ ‫ﻧﺰال‬ ‫ﻻ‬ ‫ﺑﻴﻨﻤﺎ‬ ،‫اﻟﻤﺴﺘﺪاﻣﺔ‬ ‫اﻟﺘﻨﻤﻴﺔ‬ ‫وﺗﻌﺰﻳﺰ‬ ‫اﻟﺒﻴﺌﺔ‬ ‫ﻟﺤﻤﺎﻳﺔ‬ ‫ﺟﺎﻫﺪﻳﻦ‬ ‫وﻧﺴﻌﻰ‬
+                      .‫ﻟﺸﻌﺒﻨﺎ‬ ‫ووﻇﺎﺋﻒ‬
                     </p>
                 </div>
                                 <div class="heder">
@@ -155,8 +143,7 @@
             <div class="it item2">
                 <h4>1</h4>
                 <p>
-                   Enhance the company's brand image by providing excellent distribution services and strengthening
-                    relationships with customers, suppliers and other stakeholders
+                  تعزيز صورة العلامة التجارية للشركة من خلال تقديم خدمات توزيع ممتازة وتقوية العلاقات مع العملاء والموردين وأصحاب المصلحة الآخرين
                 </p>
             </div>
           <div class="it item3">
