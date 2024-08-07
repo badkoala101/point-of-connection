@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      header {
+        background: #f4f4f4;
+        padding: 10px 0;
+      }
+
+      .logo {
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      nav {
+        float: right;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .contact-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+
+      .contact-form {
+        width: 45%;
+      }
+
+      .contact-form h2 {
+        margin-bottom: 10px;
+        font-size: 3em;
+      }
+
+      .contact-form p {
+        margin-bottom: 20px;
+      }
+
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        margin-bottom: 10px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 15px;
+        color: #0a0a0a;
+      }
+      .contact-form textarea:checked {
+        border: 1px solid #f37a5f;
+      }
+      body.dark-mode .contact-form input,
+      body.dark-mode .contact-form textarea {
+        background: #0a0a0a4e;
+        color: #fff;
+      }
+      .contact-form button {
+        padding: 15px;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 20%;
+        border: 1px solid #0a0a0a4e;
+        font-weight: 600;
+      }
+
+      .contact-form button:hover {
+        background: #f37a5f;
+        border: 1px solid #f37a5f;
+      }
+
+      .map {
+        width: 100%;
+        height: 27em;
+        margin-top: 5em;
+      }
+
+      .map iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+
+      .info-item {
+        display: flex;
+        width: 30%;
+        text-align: left;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 10px;
+        border: 1px solid rgba(87, 87, 87, 0.394);
+      }
+      .follow {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1em;
+        width: 100%;
+        max-width: 50%;
+        padding: 2em 20px 0;
+      }
+      body.dark-mode .follow .citem {
+        background-color: #0a0a0a;
+        color: #fff;
+      }
+      .follow .citem {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding-top: 1em;
+        padding: 1em;
+        border-radius: 15px;
+      }
+      .citem a {
+        text-decoration: none;
+        color: rgba(118, 118, 254, 0.701);
+      }
+      .follow .citem .icon {
+        font-size: 3em;
+        cursor: pointer;
+      }
+      .info-item .icon {
+        font-size: 44px;
+        color: #000;
+        margin-bottom: 10px;
+      }
+      body.dark-mode .info-item .icon {
+        color: #fff;
+      }
+      /* For tablets and smaller screens */
+      @media (max-width: 768px) {
+        .contact-form {
+          width: 100%;
+        }
+
+        .contact-form h2 {
+          font-size: 1.5em;
+        }
+
+        .contact-form button {
+          width: 50%;
+        }
+
+        .info-item {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+        }
+        .follow {
+          grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        }
+
+        .follow .citem {
+          width: 100%;
+        }
+        .follow .citem .icon {
+          font-size: 25px;
+        }
+        .follow .citem a {
+          font-size: 12px;
+        }
+      }
+
+      /* For small devices like smartphones */
+      @media (max-width: 412px) {
+        .container {
+          width: 100%;
+          padding: 0 1rem;
+        }
+
+        .contact-section {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .contact-form {
+          width: 100%;
+        }
+
+        .contact-form h2 {
+          font-size: 1.2em;
+        }
+
+        .contact-form button {
+          width: 50%;
+        }
+
+        .info-item {
+          width: 100%;
+        }
+
+        .follow {
+          grid-template-columns: 1fr;
+        }
+
+        .follow .citem {
+          width: 100%;
+        }
+        .follow .citem .icon {
+          font-size: 20px;
+        }
+        .follow .citem a {
+          font-size: 9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <div class="nav-bar">
+        <div class="logo">
+          <img
+            src="../img/Point_of_connection_final2_logo-1-removebg-preview.png"
+            alt="Logo"
+          />
+        </div>
+        <div class="menu-icon" id="menu-icon">&#9776; <span>Menu</span></div>
+        <nav id="nav-menu">
+          <ul class="wdn">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li>
+              <a href="service.html"
+                >Service & Support
+                <span><ion-icon name="caret-down"></ion-icon></span
+              ></a>
+              <ul class="dropdown">
+                <li><a href="service.html">Importing Services</a></li>
+                <li>
+                  <a href="service.html">Market Research & Product Selection</a>
+                </li>
+                <li><a href="service.html">Logistics Support</a></li>
+                <li><a href="service.html">Distribution Services</a></li>
+                <li><a href="service.html">Marketing Services</a></li>
+              </ul>
+            </li>
+            <li><a class="on-active" href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="toggles">
+          <div>
+            <label>
+              <input type="checkbox" class="checkbox" id="darkModeToggle" />
+              <ion-icon name="sunny" class="sun"></ion-icon>
+              <ion-icon name="moon" class="moon"></ion-icon>
+              <div class="toggle"></div>
+            </label>
+          </div>
+          <div class="lang">
+            <li>
+              <ion-icon class="langu" name="language-outline"></ion-icon
+              ><span>Lang</span>
+              <ul class="dropdown">
+                <li><a href="#">English</a></li>
+                <li><a href="#">العربية</a></li>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="hero-header">
+        <div class="hero-main">
+          <h1>Contact Us</h1>
+          <p>
+            Welcome to our platform, where the pursuit of success is fortified
+            with innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <main class="body">
+      <div class="container contact-section">
+        <div class="contact-form">
+          <h2>Get in touch.</h2>
+          <p>Reach out to us for any inquiry</p>
+          <form
+            action="https://formsubmit.co/sisaynati54@gmail.com"
+            method="POST"
+          >
+            <input type="text" name="name" placeholder="Full name" />
+            <input type="email" name="email" placeholder="Your email" />
+            <textarea
+              placeholder="Message"
+              name="subject"
+              rows="4px"
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div>
+          <h2>Follow Us On Social Medias</h2>
+          <div class="follow">
+            <div class="citem">
+              <ion-icon class="icon" name="logo-facebook"></ion-icon>
+              <a href="#">Madison Street, Ave, 14, 2nd floor</a>
+            </div>
+            <div class="citem">
+              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+              <a href="#">Madison Street, Ave, 14, 2nd floor</a>
+            </div>
+            <div class="citem">
+              <ion-icon class="icon" name="logo-instagram"></ion-icon>
+              <a href="#">Madison Street, Ave, 14, 2nd floor</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container contact-info">
+        <div class="info-item">
+          <ion-icon class="icon" name="location-outline"></ion-icon>
+          <span>
+            <p>
+              Location:<br />
+              Madison Street, Ave, 14, 2nd floor
+            </p></span
+          >
+        </div>
+        <div class="info-item">
+          <ion-icon class="icon" name="mail-outline"></ion-icon>
+          <p>
+            Email:<br />
+            hello@example.com
+          </p>
+        </div>
+        <div class="info-item">
+          <ion-icon class="icon" name="call-outline"></ion-icon>
+          <p>
+            Phone:<br />
+            +40 735 122 426
+          </p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12189.880661487121!2d46.65911437141076!3d24.72436699084787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee2bb135b37a5%3A0x2b5f26b5faafc834!2sNajd%20National%20School!5e0!3m2!1sen!2set!4v1722428119671!5m2!1sen!2set"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="logo">
+        <h1>Point</h1>
+        <p>2024 Point of connection. All rights reserved.</p>
+      </div>
+      <div class="footerabout">
+        <h4>About</h4>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Product</a>
+        <a href="#">Service & Support</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="fservice">
+        <h4>Service & Support</h4>
+        <p>Importing Services</p>
+        <p>Market Research & Product Selection</p>
+        <p>Logistics Support</p>
+        <p>Distribution Services</p>
+        <p>Marketing Services</p>
+      </div>
+      <div class="social">
+        <h4>Follow Us</h4>
+        <i class="lab la-facebook"></i>
+        <i class="lab la-telegram"></i>
+        <i class="lab la-twitter"></i>
+        <i class="lab la-instagram"></i>
+        <i class="lab la-linkedin"></i>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
