@@ -253,7 +253,7 @@ nav {
   box-shadow: none;
 }
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 902px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -305,6 +305,12 @@ nav {
   .button2 {
     padding: 0.7em 1.5em 0.7em 1.5em;
     font-size: 1em;
+  }
+  .toggl-btn {
+    font-size: 27px;
+  }
+  .langu {
+    font-size: 35px;
   }
 }
 @media (max-width: 428px) {
@@ -879,7 +885,6 @@ nav {
 .price-selector,
 .currency-selector {
   display: flex;
-  margin: 0 0 20px;
   border: none;
   text-wrap: nowrap;
 }
@@ -888,7 +893,7 @@ nav {
 .currency-selector label {
   font-size: 18px;
   margin-right: 3em;
-  padding-left: 2.5em;
+  padding-left: 0.1em;
 }
 
 .price-selector select,
@@ -900,7 +905,7 @@ nav {
 
 .popup-product-price {
   font-size: 28px;
-  color: #f39c12;
+  color: #12f31d;
   margin: 0 0 16px;
 }
 
@@ -912,8 +917,8 @@ nav {
 }
 
 .popup-quantity label {
-  margin-right: 3em;
-  padding-left: 2.5em;
+  margin-right: 2em;
+  padding-left: 0.1em;
 }
 
 .quantity-controls {
@@ -942,7 +947,7 @@ nav {
   border: 1px solid #ccc;
   border-radius: 25px;
   text-align: center;
-  margin: 0 5px;
+  margin: 2em 5px;
 }
 
 .popup-description,
@@ -973,7 +978,7 @@ nav {
 
 .popup-total-price {
   font-size: 24px;
-  color: #f39c12;
+  color: #12f31d;
   margin: 16px 0;
 }
 
@@ -1003,7 +1008,7 @@ nav {
     z-index: 10000;
   }
   .popup-product-name {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .popup-product-price {
@@ -1032,10 +1037,11 @@ nav {
 @media (max-width: 480px) {
   .popup-content {
     padding: 20px;
+    margin: 2em;
   }
 
   .popup-product-image {
-    width: 30%;
+    width: 50%;
     position: relative;
     margin-bottom: 20px;
   }
@@ -1045,7 +1051,8 @@ nav {
   }
 
   .popup-product-price {
-    font-size: 18px;
+    font-size: 28px;
+    margin-top: 1em;
   }
 
   .stars {
@@ -1063,7 +1070,8 @@ nav {
   }
 
   .popup-total-price {
-    font-size: 16px;
+    font-size: 23px;
+    margin-top: 1em;
   }
 }
 /*team*/
