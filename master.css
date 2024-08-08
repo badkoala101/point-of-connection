@@ -697,7 +697,7 @@ nav {
 .product-price {
   text-align: left;
   font-size: 24px;
-  color: #27ae60;
+  color: #219a53;
   font-weight: 600;
   padding-bottom: 1em;
   text-align: center;
@@ -726,7 +726,7 @@ nav {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
   transition: 0.5s;
-  color: var(--text-color);
+  color: var(--hover-color);
 }
 /* Media queries for responsive adjustments */
 @media (max-width: 768px) {
@@ -741,7 +741,8 @@ nav {
 
   .product-name,
   .product-price {
-    text-align: center; /* Center align text */
+    text-align: center;
+    text-wrap: wrap; /* Center align text */
   }
 
   .imgbg {
@@ -770,6 +771,7 @@ nav {
 
   .product-name {
     font-size: 18px; /* Smaller font size */
+    text-wrap: wrap;
   }
 
   .product-price {
@@ -905,7 +907,7 @@ nav {
 
 .popup-product-price {
   font-size: 28px;
-  color: #12f31d;
+  color: #219a53;
   margin: 0 0 16px;
 }
 
@@ -978,7 +980,7 @@ nav {
 
 .popup-total-price {
   font-size: 24px;
-  color: #12f31d;
+  color: #219a53;
   margin: 16px 0;
 }
 
@@ -1435,6 +1437,7 @@ nav {
   border-top: 1px solid rgba(92, 92, 92, 0.215);
   line-height: 2em;
   color: var(--text-color);
+  margin-top: 5em;
 }
 .help {
   position: relative;

@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "Poppins", sans-serif;
 
   transition: background-color 0.1s, color 0.3s;
   background: var(--transition-color);
@@ -62,9 +62,8 @@ nav {
   padding: 1rem 2rem;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.logo img {
+  width: 100px;
 }
 
 .nav-links {
@@ -173,7 +172,7 @@ nav {
   font-size: 27px;
 }
 .hero h1 {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 .hero p {
   font-size: 20px;
@@ -256,7 +255,7 @@ nav {
   box-shadow: none;
 }
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 902px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -264,10 +263,10 @@ nav {
     gap: 2rem;
     background: var(--bg-color);
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
-    height: 40%;
+    height: 35%;
     justify-content: center;
     z-index: 999;
   }
@@ -286,7 +285,7 @@ nav {
   }
 
   .hero {
-    height: 50vh;
+    height: 70vh;
   }
 
   .hero h1 {
@@ -309,11 +308,35 @@ nav {
     padding: 0.7em 1.5em 0.7em 1.5em;
     font-size: 1em;
   }
+  .toggl-btn {
+    font-size: 27px;
+  }
+  .langu {
+    font-size: 35px;
+  }
+}
+@media (max-width: 428px) {
+  .hero {
+    height: 50vh;
+    top: 15em;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero h2 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .hero p {
+    font-size: 15px;
+    font-weight: 300;
+  }
 }
 /*service*/
 
 .service {
   display: block;
+  padding: 0 2em;
 }
 .wrapper {
   display: flex;
@@ -357,7 +380,7 @@ nav {
   font-size: 1.7em;
   margin-bottom: 1em;
   text-transform: capitalize;
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   color: var(--text-color);
 }
 .item {
@@ -392,7 +415,7 @@ nav {
     min-width: 200px; /* Reduce the minimum width for smaller screens */
   }
 
-  .item h2 {
+  .items h2 {
     font-size: 1.5em; /* Adjust for smaller screens */
   }
 
@@ -411,8 +434,10 @@ nav {
     min-width: 150px; /* Reduce the minimum width for very small screens */
   }
 
-  .item h2 {
-    font-size: 1.2em; /* Adjust for very small screens */
+  .items h2 {
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: 2em; /* Adjust for very small screens */
   }
 
   .item h3 {
@@ -627,7 +652,7 @@ nav {
   text-align: center;
   font-size: 2.2em;
   cursor: pointer;
-  margin-top: 4em;
+  margin-top: 7em;
 }
 .product-grid {
   display: grid;
@@ -674,7 +699,7 @@ nav {
 .product-price {
   text-align: left;
   font-size: 24px;
-  color: #27ae60;
+  color: #219a53;
   font-weight: 600;
   padding-bottom: 1em;
   text-align: center;
@@ -703,7 +728,7 @@ nav {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
   transition: 0.5s;
-  color: var(--text-color);
+  color: var(--hover-color);
 }
 /* Media queries for responsive adjustments */
 @media (max-width: 768px) {
@@ -718,7 +743,9 @@ nav {
 
   .product-name,
   .product-price {
-    text-align: center; /* Center align text */
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 2em; /* Center align text */
   }
 
   .imgbg {
@@ -747,6 +774,7 @@ nav {
 
   .product-name {
     font-size: 18px; /* Smaller font size */
+    text-wrap: wrap;
   }
 
   .product-price {
@@ -862,7 +890,6 @@ nav {
 .price-selector,
 .currency-selector {
   display: flex;
-  margin: 0 0 20px;
   border: none;
   text-wrap: nowrap;
 }
@@ -871,7 +898,7 @@ nav {
 .currency-selector label {
   font-size: 18px;
   margin-right: 3em;
-  padding-left: 2.5em;
+  padding-left: 0.1em;
 }
 
 .price-selector select,
@@ -883,7 +910,7 @@ nav {
 
 .popup-product-price {
   font-size: 28px;
-  color: #f39c12;
+  color: #219a53;
   margin: 0 0 16px;
 }
 
@@ -895,8 +922,8 @@ nav {
 }
 
 .popup-quantity label {
-  margin-right: 3em;
-  padding-left: 2.5em;
+  margin-right: 2em;
+  padding-left: 0.1em;
 }
 
 .quantity-controls {
@@ -925,7 +952,7 @@ nav {
   border: 1px solid #ccc;
   border-radius: 25px;
   text-align: center;
-  margin: 0 5px;
+  margin: 2em 5px;
 }
 
 .popup-description,
@@ -956,7 +983,7 @@ nav {
 
 .popup-total-price {
   font-size: 24px;
-  color: #f39c12;
+  color: #219a53;
   margin: 16px 0;
 }
 
@@ -974,7 +1001,7 @@ nav {
   }
 
   .popup-product-image {
-    width: 35%;
+    width: 60%;
     position: relative;
   }
 
@@ -986,7 +1013,7 @@ nav {
     z-index: 10000;
   }
   .popup-product-name {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .popup-product-price {
@@ -1015,10 +1042,11 @@ nav {
 @media (max-width: 480px) {
   .popup-content {
     padding: 20px;
+    margin: 2em;
   }
 
   .popup-product-image {
-    width: 10%;
+    width: 50%;
     position: relative;
     margin-bottom: 20px;
   }
@@ -1028,7 +1056,8 @@ nav {
   }
 
   .popup-product-price {
-    font-size: 18px;
+    font-size: 28px;
+    margin-top: 1em;
   }
 
   .stars {
@@ -1046,7 +1075,8 @@ nav {
   }
 
   .popup-total-price {
-    font-size: 16px;
+    font-size: 23px;
+    margin-top: 1em;
   }
 }
 /*team*/
@@ -1056,7 +1086,7 @@ nav {
 .Team-wrapper {
   display: flex;
   width: 100%;
-  height: 300px;
+  height: 220px;
   overflow: hidden;
   mask-image: linear-gradient(
     to right,
@@ -1086,7 +1116,7 @@ nav {
 }
 .team {
   width: 300px;
-  height: 250px;
+  height: 100%;
   margin: 0 0.3em;
   background: var(--bg-color);
   padding: 2em;
@@ -1405,12 +1435,14 @@ nav {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top: 5rem;
   padding: 3rem 3rem;
   background: var(--footer);
   border-top: 1px solid rgba(92, 92, 92, 0.215);
   line-height: 2em;
   color: var(--text-color);
+  direction: rtl;
+  text-align: right;
+  margin-top: 5em;
 }
 .help {
   position: relative;
@@ -1455,6 +1487,7 @@ nav {
 /* For tablets and smaller screens */
 @media (max-width: 768px) {
   .footer {
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
@@ -1482,7 +1515,7 @@ nav {
   }
 }
 /* For small devices like smartphones */
-@media (max-width: 412px) {
+@media (max-width: 420px) {
   .footer {
     flex-direction: column;
     align-items: center;
@@ -1516,7 +1549,7 @@ nav {
 
 /*contact us page CSS*/
 .contact-body {
-  margin: -10em 2em 0 2em;
+  margin: -5em 2em;
 }
 .contact-section {
   display: flex;
@@ -1738,7 +1771,7 @@ nav {
 /*service page*/
 .vh {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
   grid-gap: 5em;
   margin-top: -9em;
   height: 100%;
@@ -1809,7 +1842,7 @@ nav {
 /* For tablets and smaller screens */
 @media (max-width: 768px) {
   .vh {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     padding-left: 0rem;
   }
 
@@ -1830,7 +1863,7 @@ nav {
 }
 
 /* For small devices like smartphones */
-@media (max-width: 412px) {
+@media (max-width: 420px) {
   .vh {
     grid-template-columns: 1fr;
     padding: 0.5rem;
