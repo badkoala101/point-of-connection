@@ -993,6 +993,9 @@ nav {
   font-size: 18px;
   border-radius: 5px;
   border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
 }
 
 .popup-product-price {
@@ -1088,8 +1091,8 @@ nav {
   }
 
   .popup-product-image {
-    width: 60%;
-    position: relative;
+    width: 50%;
+    top: 0;
   }
 
   .popup-left,
@@ -1098,6 +1101,7 @@ nav {
   }
   .popup-right {
     z-index: 10000;
+    margin-top: 7em;
   }
   .popup-product-name {
     font-size: 28px;
@@ -1113,38 +1117,41 @@ nav {
 
   .popup-description h3,
   .popup-details h3 {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .popup-description p,
   .popup-details ul {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .popup-total-price {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
 @media only screen and (max-width: 460px) {
   .popup-content {
-    padding: 20px;
+    padding: 10px;
     margin: 2em;
   }
 
   .popup-product-image {
-    width: 55%;
+    width: 35%;
     top: 5px;
     position: absolute;
-    margin-bottom: 20px;
   }
   .popup-left::before {
     width: 10em;
     height: 10em;
   }
+  .popup-right {
+    margin-top: 1px;
+  }
   .popup-quantity label {
-    margin-right: 0.7em;
+    margin-right: 0.4em;
     padding-left: 0.1em;
+    font-size: 15px;
   }
   #quantity {
     width: 100px;
@@ -1156,6 +1163,28 @@ nav {
   .popup-product-price {
     font-size: 20px;
     margin-top: 1em;
+  }
+  .price-selector label,
+  .currency-selector label {
+    font-size: 15px;
+    margin-right: 0.7em;
+  }
+
+  .price-selector select,
+  .currency-selector select {
+    font-size: 14px;
+    border-radius: 25px;
+  }
+  .quantity-btn {
+    padding: 3px 9px;
+  }
+
+  #quantity {
+    width: 90px;
+    padding: 3px 12px;
+    font-size: 18px;
+    border-radius: 55px;
+    margin: 1.2em 5px;
   }
 
   .stars {
@@ -1173,8 +1202,8 @@ nav {
   }
 
   .popup-total-price {
-    font-size: 20px;
-    margin-top: 1em;
+    font-size: 18px;
+    margin-top: 0.5em;
   }
 }
 @media only screen and (max-width: 380px) {
@@ -1183,9 +1212,12 @@ nav {
     height: 90%;
   }
   .popup-product-image {
-    width: 50%;
+    width: 40%;
     position: absolute;
-    top: 10px;
+    top: 2px;
+  }
+  .popup-right {
+    margin-top: 2px;
   }
   .popup-left::before {
     width: 5em;
@@ -1193,27 +1225,27 @@ nav {
   }
   .price-selector label,
   .currency-selector label {
-    font-size: 15px;
+    font-size: 12px;
     margin-right: 0.7em;
   }
 
   .price-selector select,
   .currency-selector select {
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 25px;
   }
   .popup-quantity label {
     margin-right: 0.7em;
     padding-left: 0.1em;
-    font-size: 15px;
+    font-size: 12px;
   }
   .quantity-btn {
-    padding: 4px 8px;
+    padding: 1px 7px;
   }
 
   #quantity {
     width: 70px;
-    padding: 5px 10px;
+    padding: 1px 10px;
     font-size: 18px;
     border-radius: 5px;
     margin: 1.2em 5px;
@@ -1236,17 +1268,17 @@ nav {
 
   .popup-description h3,
   .popup-details h3 {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .popup-description p,
   .popup-details ul {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .popup-total-price {
     font-size: 18px;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
   }
 }
 /*team*/
