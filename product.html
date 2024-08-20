@@ -77,8 +77,8 @@
       <div
         class="product-card"
         data-name="Fun Day Muffin Cake"
-        data-pack-price="3.46"
-        data-carton-price="41.56"
+        data-pack-price="13"
+        data-carton-price="156"
         data-image="img/muffincake.png"
         data-description="Enjoy it all by yourself or with family and friends, our muffin cake is perfect for any occasion."
         data-details='["Ingredients: Wheat Flour, Sugar, Eggs, Butter, Milk, Baking Powder, Vanilla Extract, Salt.", "Weight: 50g"]'
@@ -104,8 +104,8 @@
             <div
         class="product-card"
         data-name="Fun Day Cake Slice"
-        data-pack-price="2.93"
-        data-carton-price="35.17"
+        data-pack-price="11"
+        data-carton-price="132"
         data-image="img/fundaycakeslice.png"
         data-description="Enjoy it all by yourself or with family and friends."
         data-details='["Ingredients: Wheat Flour, Sugar, Eggs, Butter, Milk, Vanilla Extract, Baking Powder, Salt.", "Weight: 40g"]'
@@ -130,8 +130,8 @@
                   <div
         class="product-card"
         data-name="Today Milk Chocolate with Hazelnuts"
-        data-pack-price="5.86"
-        data-carton-price="70.33"
+        data-pack-price="22"
+        data-carton-price="264"
         data-image="img/hazelnuts.png"
         data-description="Enjoy our Today Milk Chocolate with Hazelnuts, a delicious treat perfect for savoring alone or sharing with friends and family."
         data-details='["Ingredients: Milk Chocolate, Sugar, Cocoa Butter, Whole Milk Powder, Cocoa Mass, Hazelnuts, Soy Lecithin, Vanilla Extract.", "Weight: 25g"]'
@@ -152,6 +152,7 @@
         </button>
         </div>
       </div>
+      
       <!-- Add more product cards as needed -->
     </div>
     
@@ -159,8 +160,8 @@
      <div
         class="product-card"
         data-name="Fun Day Chocolate Chip Brownie"
-        data-pack-price="3.46"
-        data-carton-price="41.56"
+        data-pack-price="13"
+        data-carton-price="156"
         data-image="img/brownie.png"
         data-description="Indulge in our Fun Day Chocolate Chip Brownie, perfect to enjoy by yourself or to share with family and friends."
         data-details='["Ingredients: Wheat Flour, Sugar, Eggs, Butter, Cocoa Powder, Chocolate Chips, Baking Powder, Vanilla Extract, Salt.", "Weight: 40g"]'
@@ -185,8 +186,8 @@
       <div
         class="product-card"
         data-name="Today Milk Chocolate"
-        data-pack-price="5.86"
-        data-carton-price="70.33"
+        data-pack-price="22"
+        data-carton-price="264"
         data-image="img/todaymilkchocolate.png"
         data-description="Treat yourself to our Fun Day Milk Chocolate, a delightful snack to enjoy on your own or with loved ones."
         data-details='["Ingredients: Milk Chocolate, Sugar, Cocoa Butter, Whole Milk Powder, Cocoa Mass, Soy Lecithin, Vanilla Extract.", "Weight: 25g"]'
@@ -207,15 +208,11 @@
         </button>
         </div>
       </div>
-      <!-- Add more product cards as needed -->
-    </div>
-
-        <div class="product-grid">
-      <div
+           <div
         class="product-card"
         data-name="Today Fruits & Nuts in Milk Chocolate"
-        data-pack-price="5.86"
-        data-carton-price="70.33"
+        data-pack-price="22"
+        data-carton-price="264"
         data-image="img/fruitnuts.png"
         data-description="Indulge in our Today Fruits & Nuts in Milk Chocolate, a rich and satisfying snack perfect for enjoying on your own or sharing with loved ones."
         data-details='["Ingredients: Milk Chocolate, Sugar, Cocoa Butter, Whole Milk Powder, Cocoa Mass, Dried Fruits, Nuts, Soy Lecithin, Vanilla Extract.", "Weight: 25g"]'
@@ -237,12 +234,11 @@
         </button>
         </div>
       </div>
-      <!--product2-->
-            <div
+                 <div
         class="product-card"
         data-name="Today Milk Chocolate with Almond Nuts"
-        data-pack-price="5.86"
-        data-carton-price="70.33"
+        data-pack-price="22"
+        data-carton-price="264"
         data-image="img/almondnuts.png"
         data-description="Savor the smooth taste of our Today Milk Chocolate with Almond Nuts, a delightful treat to enjoy by yourself or with friends and family."
         data-details='["Ingredients: Milk Chocolate, Sugar, Cocoa Butter, Whole Milk Powder, Cocoa Mass, Almond Nuts, Soy Lecithin, Vanilla Extract.", "Weight: 25g"]'
@@ -295,8 +291,8 @@
           <div class="currency-selector">
             <label for="currency">Currency:</label>
             <select id="currency" onchange="updateCurrency()">
-              <option value="USD">USD</option>
               <option value="SAR">SAR</option>
+              <option value="USD">USD</option>
             </select>
           </div>
           <div class="popup-quantity">
@@ -386,95 +382,82 @@
         </div>
       </footer>
     <script>
-       const exchangeRate = 3.75; // Example exchange rate: 1 USD = 3.75 SAR
-      let currentCurrency = "USD";
-      let basePriceUSD = {};
+      const exchangeRate = 3.75; // Example exchange rate: 1 USD = 3.75 SAR
+let currentCurrency = "SAR"; // Default currency set to SAR
+let basePriceSAR = {}; // Prices stored in SAR
 
-      function showPopup(button) {
-        const productCard = button.closest(".product-card");
-        const productName = productCard.getAttribute("data-name");
-        const productCategory = productCard.getAttribute("data-category");
-        const piecePrice = parseFloat(
-          productCard.getAttribute("data-piece-price")
-        );
-        const packPrice = parseFloat(
-          productCard.getAttribute("data-pack-price")
-        );
-        const cartonPrice = parseFloat(
-          productCard.getAttribute("data-carton-price")
-        );
-        const productImage = productCard.getAttribute("data-image");
-        const productDescription = productCard.getAttribute("data-description");
-        const productDetails = JSON.parse(
-          productCard.getAttribute("data-details")
-        ); // Parse the details attribute
+function showPopup(button) {
+    const productCard = button.closest(".product-card");
+    const productName = productCard.getAttribute("data-name");
+    const productCategory = productCard.getAttribute("data-category");
+    const piecePrice = parseFloat(productCard.getAttribute("data-piece-price"));
+    const packPrice = parseFloat(productCard.getAttribute("data-pack-price"));
+    const cartonPrice = parseFloat(productCard.getAttribute("data-carton-price"));
+    const productImage = productCard.getAttribute("data-image");
+    const productDescription = productCard.getAttribute("data-description");
+    const productDetails = JSON.parse(productCard.getAttribute("data-details"));
 
-        basePriceUSD = {
-          piece: piecePrice,
-          pack: packPrice,
-          carton: cartonPrice,
-        };
+    basePriceSAR = {
+        piece: piecePrice,
+        pack: packPrice,
+        carton: cartonPrice,
+    };
 
-        document.querySelector(".popup-product-name").textContent = productName;
-        document.querySelector(".popup-product-category").textContent =
-          productCategory;
-        document.querySelector(".popup-product-image").src = productImage;
-        document.getElementById("popup-description-text").textContent =
-          productDescription; // Update description
+    document.querySelector(".popup-product-name").textContent = productName;
+    document.querySelector(".popup-product-category").textContent = productCategory;
+    document.querySelector(".popup-product-image").src = productImage;
+    document.getElementById("popup-description-text").textContent = productDescription;
 
-        // Update details
-        const detailsList = document.getElementById("popup-details-list");
-        detailsList.innerHTML = ""; // Clear existing details
-        productDetails.forEach((detail) => {
-          const li = document.createElement("li");
-          li.textContent = detail;
-          detailsList.appendChild(li);
-        });
+    // Update details
+    const detailsList = document.getElementById("popup-details-list");
+    detailsList.innerHTML = ""; // Clear existing details
+    productDetails.forEach((detail) => {
+        const li = document.createElement("li");
+        li.textContent = detail;
+        detailsList.appendChild(li);
+    });
 
-        document.getElementById("popup").style.display = "flex";
+    document.getElementById("popup").style.display = "flex";
 
-        updateCurrency();
-        updatePrice();
-      }
+    updateCurrency();
+    updatePrice();
+}
 
-      function hidePopup() {
-        document.getElementById("popup").style.display = "none";
-      }
+function hidePopup() {
+    document.getElementById("popup").style.display = "none";
+}
 
-      function updatePrice() {
-        const quantity = document.getElementById("quantity").value;
-        const priceType = document.getElementById("price-type").value;
-        let basePrice =
-          currentCurrency === "USD"
-            ? basePriceUSD[priceType]
-            : basePriceUSD[priceType] * exchangeRate;
-        const newPrice = (basePrice * quantity).toFixed(2);
-        document.getElementById("price").textContent = newPrice;
-        document.getElementById(
-          "total-price"
-        ).textContent = `${currentCurrency} ${newPrice}`;
-      }
+function updatePrice() {
+    const quantity = document.getElementById("quantity").value;
+    const priceType = document.getElementById("price-type").value;
+    let basePrice = currentCurrency === "USD"
+        ? basePriceSAR[priceType] / exchangeRate // Convert SAR to USD
+        : basePriceSAR[priceType]; // Use SAR price directly
+    const newPrice = (basePrice * quantity).toFixed(2);
+    document.getElementById("price").textContent = newPrice;
+    document.getElementById("total-price").textContent = `${currentCurrency} ${newPrice}`;
+}
 
-      function updateCurrency() {
-        currentCurrency = document.getElementById("currency").value;
-        const priceType = document.getElementById("price-type").value;
-        const priceContainer = document.getElementById("price-container");
-        let price =
-          currentCurrency === "USD"
-            ? basePriceUSD[priceType]
-            : (basePriceUSD[priceType] * exchangeRate).toFixed(2);
-        priceContainer.innerHTML = `${currentCurrency} <span id="price">${price}</span>`;
-        updatePrice();
-      }
+function updateCurrency() {
+    currentCurrency = document.getElementById("currency").value;
+    const priceType = document.getElementById("price-type").value;
+    const priceContainer = document.getElementById("price-container");
+    let price = currentCurrency === "USD"
+        ? (basePriceSAR[priceType] / exchangeRate).toFixed(2) // Convert to USD
+        : basePriceSAR[priceType]; // Display SAR price
+    priceContainer.innerHTML = `${currentCurrency} <span id="price">${price}</span>`;
+    updatePrice();
+}
 
-      function changeQuantity(change) {
-        const quantityInput = document.getElementById("quantity");
-        let currentQuantity = parseInt(quantityInput.value);
-        currentQuantity += change;
-        if (currentQuantity < 1) currentQuantity = 1;
-        quantityInput.value = currentQuantity;
-        updatePrice();
-      }
+function changeQuantity(change) {
+    const quantityInput = document.getElementById("quantity");
+    let currentQuantity = parseInt(quantityInput.value);
+    currentQuantity += change;
+    if (currentQuantity < 1) currentQuantity = 1;
+    quantityInput.value = currentQuantity;
+    updatePrice();
+}
+
     </script>
               <script
       type="module"

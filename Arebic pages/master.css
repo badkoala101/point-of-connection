@@ -765,7 +765,7 @@ nav {
   text-align: left;
   font-size: 18px;
   font-weight: 700;
-  text-wrap: nowrap;
+  text-wrap: wrap;
   color: var(--text-color);
 }
 .product-card:hover img {
@@ -997,7 +997,7 @@ nav {
   font-size: 18px;
   border-radius: 5px;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Poppins", sans-serif;
 }
