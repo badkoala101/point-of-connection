@@ -188,11 +188,11 @@
   <div
         class="product-card"
         data-name="‫فن‬‫داي‬ ‫كاب‬ ‫كيك‬"
-        data-pack-price="3.47"
-        data-carton-price="41.58"
+        data-pack-price="13"
+        data-carton-price="156"
         data-image="../img/muffincake.png"
         data-description="استمتع بها وحدك أو مع العائلة والأصدقاء، فالكعكة المافن لدينا مثالية لأي مناسبة"
-        data-details='["المكونات: دقيق القمح، سكر، بيض، زبدة، حليب، مسحوق الخبز، مستخلص الفانيليا، ملح", "الوزن: 50 جرام"]'
+        data-details='["المكونات: دقيق القمح، سكر، بيض، زبدة، حليب، مسحوق الخبز، مستخلص الفانيليا، ملح", "الوزن: ٥٠ جرام"]'
       >
       <div class="new-badge">!جديد</div>
         <div class="imgbg">
@@ -215,11 +215,11 @@
             <div
         class="product-card"
         data-name="‫فن‬‫داي‬ ‫شرائح‬ ‫كيك‬"
-        data-pack-price="2.93"
-        data-carton-price="35.18"
+        data-pack-price="11"
+        data-carton-price="132"
         data-image="../img/fundaycakeslice.png"
-        data-description="snack Description."
-        data-details='["ingridant: Plywood, Oak Veneer, Semi-Aniline Italian Leather", "Weight: 40g"]'
+        data-description="استمتع بها بمفردك أو مع العائلة والأصدقاء"
+        data-details='["المكونات: دقيق القمح، سكر، بيض، زبدة، حليب، مستخلص الفانيليا، مسحوق الخبز، ملح", "الوزن: ٤٠ جم"]'
       >
       <div class="new-badge">!جديد</div>
         <div class="imgbg">
@@ -241,11 +241,11 @@
                   <div
         class="product-card"
         data-name="‫فن‬‫داي‬ ‫براونيز‬"
-        data-pack-price="2.93"
-        data-carton-price="35.18"
+        data-pack-price="13"
+        data-carton-price="156"
         data-image="../img/brownie.png"
-        data-description="snack Description."
-        data-details='["ingridant: Plywood, Oak Veneer, Semi-Aniline Italian Leather", "Weight: 40g"]'
+        data-description="استمتع بقطعة البراوني بالشوكولاتة من فن داي، مثالية للاستمتاع بها بمفردك أو لمشاركتها مع العائلة والأصدقاء"
+        data-details='["المكونات: دقيق القمح، سكر، بيض، زبدة، مسحوق الكاكاو، رقائق الشوكولاتة، مسحوق الخبز، مستخلص الفانيليا، ملح", "الوزن: ٤٠ جم"]'
       >
       <div class="new-badge">!جديد</div>
         <div class="imgbg">
@@ -266,11 +266,11 @@
        <div
         class="product-card"
         data-name="توداي شوكولاته بالحليب"
-        data-pack-price="3.47"
-        data-carton-price="41.58"
+        data-pack-price="22"
+        data-carton-price="264"
         data-image="../img/todaymilkchocolate.png"
-        data-description="snack Description."
-        data-details='["ingridant: Plywood, Oak Veneer, Semi-Aniline Italian Leather", "Color: Cream Leather", "Weight: 40g"]'
+        data-description="استمتع بحلوى الشوكولاتة بالحليب الخاصة فن داي، وجبة خفيفة لذيذة يمكنك الاستمتاع بها بمفردك أو مع أحبائك"
+        data-details='["المكونات: شوكولاتة حليب، سكر، زبدة كاكاو، مسحوق حليب كامل، كتلة كاكاو، ليسيثين الصويا، مستخلص الفانيليا", "الوزن: ٢٥ جرام"]'
       >
       <div class="new-badge">!جديد</div>
         <div class="imgbg">
@@ -310,24 +310,24 @@
             <span class="stars">★★★★★</span>
           </div>
           <div class="price-selector">
-            <label for="price-type">Price Type:</label>
+            <label for="price-type">نوع السعر</label>
             <select id="price-type" onchange="updatePrice()">
-              <option value="pack">Price per Pack</option>
-              <option value="carton">Price per Carton</option>
+              <option value="pack">سعر بالعلب</option>
+              <option value="carton">سعر بالكرتون</option>
             </select>
           </div>
           <p class="popup-product-price" id="price-container">
             $<span id="price">599.00</span>
           </p>
           <div class="currency-selector">
-            <label for="currency">Currency:</label>
+            <label for="currency">العملة</label>
             <select id="currency" onchange="updateCurrency()">
-              <option value="SAR">SAR</option>
-              <option value="USD">USD</option>
+              <option value="ريال">ريال</option>
+              <option value="دولار أمريكي">دولار أمريكي</option>
             </select>
           </div>
           <div class="popup-quantity">
-            <label for="quantity">Quantity:</label>
+            <label for="quantity">الكمية</label>
             <div class="quantity-controls">
               <button class="quantity-btn" onclick="changeQuantity(-1)">
                 -
@@ -346,14 +346,14 @@
             </div>
           </div>
           <div class="popup-description">
-            <h3>Description</h3>
+            <h3>الوصف</h3>
             <p id="popup-description-text">
               This is a detailed description of the product. It includes all the
               important features and benefits.
             </p>
           </div>
           <div class="popup-details">
-            <h3>Details</h3>
+            <h3>التفاصيل</h3>
             <ul id="popup-details-list">
               <li>Size: 29.5"H x 28.5"W x 28.5"D</li>
               <li>
@@ -364,7 +364,7 @@
             </ul>
           </div>
           <div class="popup-total-price">
-            <span>Total Price: <span id="total-price">$599.00</span></span>
+            <span>السعر الإجمالي <span id="total-price">$599.00</span></span>
           </div>
         </div>
       </div>
